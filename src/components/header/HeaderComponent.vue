@@ -6,13 +6,8 @@
         <navbar-toggler/>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <nav-menu/>
-          
           <form-search/>
-
-          <div class="text-end mb-4 mt-4 mb-md-0 mt-md-0 ms-2">
-            <button type="button" class="btn btn-outline-info me-2">Login</button>
-            <button type="button" class="btn btn-outline-light">Sign-up</button>
-          </div>
+          <activation-buttons/>
         </div>
       </div>
     </nav>
@@ -23,11 +18,12 @@
 import NavMenu from './NavMenu.vue'
 import FormSearch from './FormSearch.vue'
 import NavbarToggler from './NavbarToggler.vue'
+import ActivationButtons from './ActivationButtons.vue'
 
   export default {
     name: 'HeaderComponent',
     components: {
-      NavMenu, FormSearch, NavbarToggler
+      NavMenu, FormSearch, NavbarToggler, ActivationButtons
     }
   }
 </script>
