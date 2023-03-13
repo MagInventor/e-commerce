@@ -2,7 +2,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top text-bg-dark">
       <div class="container-fluid">
-        <a class="logo navbar-brand" href="#">Robot</a>
+        <a href="#" class="logo navbar-brand">Robot</a>
         <navbar-toggler/>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <nav-menu/>
@@ -35,6 +35,10 @@ import FormActivation from '../forms/FormActivation.vue'
 </script>
 
 <style>
+  .logo {
+    color: #fff;
+  }
+
   .nav-scroller {
     position: relative;
     z-index: 2;
