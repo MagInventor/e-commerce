@@ -1,5 +1,16 @@
 <template>
   <div class="blog">
-    <h1>This is a blog page</h1>
+    <header-component/>
   </div>
 </template>
+
+<script>
+import HeaderComponent from '@/components/header/HeaderComponent.vue'
+
+export default {
+  name: 'BlogView',
+  components: {
+    HeaderComponent
+  }
+}
+</script>

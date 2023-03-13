@@ -1,5 +1,16 @@
 <template>
   <div class="catalog">
-    <h1>This is a catalog page</h1>
+    <header-component/>
   </div>
 </template>
+
+<script>
+import HeaderComponent from '@/components/header/HeaderComponent.vue'
+
+export default {
+  name: 'CatalogView',
+  components: {
+    HeaderComponent
+  }
+}
+</script>

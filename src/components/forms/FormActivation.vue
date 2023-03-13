@@ -3,13 +3,13 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-4 shadow">
         <div class="modal-header p-5 pb-4 border-bottom-0">
-          <h1 class="fw-bold mb-0 fs-2">Sign up for free</h1>
+          <h1 class="fw-bold mb-0 fs-2">{{title}}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <div class="modal-body p-5 pt-0">
-          <form class="">
-            <div class="form-floating mb-3 bt-hide bt-reg">
+          <form class="form-activation">
+            <div class="form-floating mb-3 bt-hide bt-reg form-activation_registration">
               <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Name">
               <label for="floatingPassword">Name</label>
             </div>
@@ -21,16 +21,16 @@
               <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
               <label for="floatingPassword">Password</label>
             </div>
-            <div class="form-floating mb-3 bt-hide bt-reg">
+            <div class="form-floating mb-3 bt-hide bt-reg form-activation_registration">
               <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Repeat password">
               <label for="floatingPassword">Repeat Password</label>
             </div>
-            <div class="checkbox mb-3">
+            <div class="checkbox mb-3 form-activation_checkbox">
               <label>
                 <input type="checkbox" value="remember-me"> Remember me
               </label>
             </div>
-            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-dark" type="submit">Sign up</button>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-dark" type="submit">{{submit}}</button>
             <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
             <hr class="my-4">
             <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
@@ -56,7 +56,13 @@
 <script>
   export default {
     name: 'FormActivation',
-    components: {}
+    components: {},
+    data() {
+      return {
+        title: 'Sign up for free',
+        submit: 'Sign up'
+      }
+    }
   }
 </script>
 
@@ -75,6 +81,18 @@
   }
 
   .bt-reg {
+    display: block;
+  }
+
+  .form-activation_checkbox {
+    float: left;
+  }
+
+  .form-activation_registration {
+    display: none;
+  }
+
+  .form-activation_show {
     display: block;
   }
 </style>
