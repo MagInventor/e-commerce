@@ -22,11 +22,11 @@ const routes = [
     name: 'blog',
     component: () => import('../views/BlogView.vue')
   },
-  {
-    path: '/activation',
-    name: 'activation',
-    component: () => import('../views/ActivationView.vue')
-  },
+  // {
+  //   path: '/activation',
+  //   name: 'activation',
+  //   component: () => import('../views/ActivationView.vue')
+  // },
   // {
   //   path: '/contacts',
   //   name: 'contacts',

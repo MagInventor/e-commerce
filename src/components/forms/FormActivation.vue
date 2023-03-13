@@ -1,29 +1,35 @@
 <template>
-  <div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+  <div 
+    class="modal modal-signin position-static bg-secondary py-5" 
+    tabindex="-1" 
+    role="dialog" 
+    id="modalSignin"
+    @click="close"
+  >
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-4 shadow">
         <div class="modal-header p-5 pb-4 border-bottom-0">
           <h1 class="fw-bold mb-0 fs-2">{{title}}</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @click="formClose"></button>
         </div>
 
         <div class="modal-body p-5 pt-0">
           <form class="form-activation">
             <div class="form-floating mb-3 bt-hide bt-reg form-activation_registration">
-              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Name">
-              <label for="floatingPassword">Name</label>
+              <input type="password" class="form-control rounded-3" id="floatingName" placeholder="Name">
+              <label for="floatingName">Name</label>
             </div>
             <div class="form-floating mb-3">
               <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
+              <label for="floatingInput">Email</label>
             </div>
             <div class="form-floating mb-3">
               <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
               <label for="floatingPassword">Password</label>
             </div>
             <div class="form-floating mb-3 bt-hide bt-reg form-activation_registration">
-              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Repeat password">
-              <label for="floatingPassword">Repeat Password</label>
+              <input type="password" class="form-control rounded-3" id="floatingRepeatPassword" placeholder="Repeat password">
+              <label for="floatingRepeatPassword">Repeat Password</label>
             </div>
             <div class="checkbox mb-3 form-activation_checkbox">
               <label>
@@ -61,6 +67,18 @@
       return {
         title: 'Sign up for free',
         submit: 'Sign up'
+      }
+    },
+    methods: {
+      formClose() {
+        document.querySelector('.modal').classList.remove('d-block')
+
+        document.querySelectorAll('input.form-control').forEach(item => {
+          item.value = ''
+        })
+      },
+      close() {
+        // console.log(document.querySelector('.modal-content'))
       }
     }
   }

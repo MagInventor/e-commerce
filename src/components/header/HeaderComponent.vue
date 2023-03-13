@@ -11,6 +11,7 @@
         </div>
       </div>
     </nav>
+    <form-activation/>
   </header>
 </template>
 
@@ -19,11 +20,16 @@ import NavMenu from './NavMenu.vue'
 import FormSearch from './FormSearch.vue'
 import NavbarToggler from './NavbarToggler.vue'
 import ActivationButtons from './ActivationButtons.vue'
+import FormActivation from '../forms/FormActivation.vue'
 
   export default {
     name: 'HeaderComponent',
     components: {
-      NavMenu, FormSearch, NavbarToggler, ActivationButtons
+      NavMenu, 
+      FormSearch, 
+      NavbarToggler, 
+      ActivationButtons,
+      FormActivation
     }
   }
 </script>
